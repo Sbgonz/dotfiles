@@ -1,0 +1,7 @@
+set forcekitty
+
+preview epubzip .epub {{
+		CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/lf/thumb.$(stat --printf '%n\0%i\0%F\0%s\0%W\0%Y' -- "$(readlink -f "$f")" | sha256sum | cut -d' ' -f1)"
+		[ ! -f "$CACHE.jpg" ] && gnome-epub-thumbnailer "$f" "$CACHE.jpg"
+        ctpv "$CACHE.jpg"
+}}

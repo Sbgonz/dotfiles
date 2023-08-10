@@ -1,0 +1,7 @@
+window:
+    startup_mode: Windowed
+    decorations: None
+    dimensions:
+      columns: 100
+      lines: 85
+    opacity: 1.0
